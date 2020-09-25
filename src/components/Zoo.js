@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardBody, CardTitle, CardText, Container, Row } from 'reactstrap';
+import { Card, CardImg, CardBody, CardTitle, CardText, Container, Row, Navbar } from 'reactstrap';
 
 class Zoo extends Component {
     constructor (props) {
@@ -10,9 +10,9 @@ class Zoo extends Component {
     }
 
     selectedAnimal (animal) {
-        console.log(animal);
+        // console.log(animal);
         this.setState({selected: animal});
-        console.log(this.state.selected);
+        // console.log(this.state.selected);
     }
 
     renderSelectedAnimal (animal) {
@@ -30,8 +30,8 @@ class Zoo extends Component {
     render () {
         const zoo = this.props.animals.map((animal) => {
             return (
-                <Card sm={6} md={4}>
-                    <CardImg top width="300px" height="200px" src={animal.image} alt={animal.title} />
+                <Card sm={6} md={4} onClick={() => this.selectedAnimal(animal)}>
+                    <CardImg top width="300px" src={animal.image} alt={animal.title} />
                     <CardBody>
                         <CardTitle>{animal.title}</CardTitle>
                         {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
@@ -50,10 +50,10 @@ class Zoo extends Component {
         });
         return (
             <Container>
-                <Row>
+                <Navbar color="primary">{this.renderSelectedAnimal(this.state.selected)}</Navbar>
+                <Row height="200px">
                     {zoo}
                 </Row>
-                {this.renderSelectedAnimal(this.state.selected)}
             </Container>
         );
     }
