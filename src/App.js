@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ANIMALS } from './shared/animals';
 import NavMenu from './components/topMenu/NavMenu';
-import ItemList from './components/items/ItemList';
+import styled from 'styled-components';
 
 class App extends Component {
   constructor (props) {
@@ -15,20 +15,53 @@ class App extends Component {
         {id: 5, title: "Clearance", color: '#FF0000'}
       ],
       items: ANIMALS
-    }
+    };
   }
 
   render () {
     return (
-      <div>
-        <NavMenu list={this.state.menuList} />
-        <ItemList list={this.state.items} />
-      </div>
+      <Nav>
+        <NavMenu list={this.state.menuList} items={this.state.items}/>
+      </Nav>
     );
   }
 }
 
+const Nav = styled.nav`
+    background: gray;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 20px;
+        li {
+            padding: 5px;
+        }
+    }
+`;
+
 export default App;
 
-// import './App.css';
-// import Zoo from './components/Zoo';
+// const user = {name:'Thomas', surname:'Philips'}
+
+// const SimpleH2 = props => <h2 {...props} />
+
+// const NiceH2 = styled(SimpleH2)`
+//     color: ${props => props.$color}
+// `;
+
+
+
+//   const About = (props) =>
+//   console.log(props) ||
+//     <h2>About</h2>;
+
+// const OtherUser = (props) => <UserHoc {...props}/>
+
+
+// const Users = (props) =>
+// console.log(props) ||
+//   <h2>Users</h2>;
+
+
+// const UserHoc = withRouter(Users)

@@ -7,7 +7,7 @@ const NavMenu = (props) => {
     return (
         <Menu className={props.className}>
             <NavLogo image={'assets/images/dollskill_logo.png'} />
-            <NavList list={props.list} />
+            <NavList list={props.list} items={props.items} />
         </Menu>
     );
 }
