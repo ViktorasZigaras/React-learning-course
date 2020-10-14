@@ -19,7 +19,10 @@ const List = (props) => {
             </ul>
           </nav>
             
+          <div>
             <Route exact path="/1" component={() => <ItemsRouted list={props.items} />} />
+          </div>
+            
             {/* <Route exact path="/2" component={Items} />
             <Route exact path="/3" component={Items} />
             <Route exact path="/4" component={Items} />
