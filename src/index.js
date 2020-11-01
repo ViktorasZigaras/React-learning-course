@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import 'boostrap/dist/css/boostrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
+import App from './components/bookstore/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

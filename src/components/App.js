@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ANIMALS } from './shared/animals';
-import NavMenu from './components/topMenu/NavMenu';
+import { ANIMALS } from '../shared/animals';
+import NavMenu from './topMenu/NavMenu';
 import styled from 'styled-components';
 
 class App extends Component {

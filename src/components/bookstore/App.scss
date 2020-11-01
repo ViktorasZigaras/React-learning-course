@@ -1,0 +1,75 @@
+$sm: 740px;
+$md: 900px;
+$lg: 1280px;
+$xl: 1600px;
+$size: 400px;
+@import 'grid';
+// @import 'css/astra.scss';
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    span {
+        font-size: 20px;
+        color: greenyellow;
+    }
+}
+
+.sort {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    div,
+    span {
+        font-size: 30px;
+        color: gold;
+        padding: 20px;
+        cursor: pointer;
+    }
+}
+
+.filter {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid gray;
+    select {
+        margin: 10px 0;
+        display: block;
+    }
+}
+
+.book {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    h2,
+    h4 {
+        margin: 0;
+        padding: 0;
+    }
+    h4 {
+        color: orangered;
+        padding: 7px 0;
+    }
+    img {
+        height: 200px;
+        width: auto;
+        margin-bottom: 15px;
+    }
+    span {
+        color: gray;
+        font-size: 26px;
+    }
+}
