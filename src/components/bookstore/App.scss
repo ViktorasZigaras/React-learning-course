@@ -14,6 +14,10 @@ body {
     flex-direction: column;
 }
 
+.none {
+    display: none;
+}
+
 h1 {
     text-align: center;
     span {
@@ -28,11 +32,56 @@ h1 {
     align-items: center;
     flex-direction: row;
     div,
-    span {
+    span.active {
         font-size: 30px;
         color: gold;
         padding: 20px;
         cursor: pointer;
+    }
+    span.pasive {
+        font-size: 30px;
+        color: black;
+        padding: 20px;
+    }
+}
+
+.like-button {
+    svg {
+        width: 24px;
+        height: 24px;
+        margin: 0 0 0 10px;
+        display: inline-block;
+        fill: yellow;
+        cursor: pointer;
+    }
+    &.dislike {
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+.sorter {
+    svg {
+        width: 24px;
+        height: 24px;
+        margin: 0 0 0 10px;
+        display: inline-block;
+        fill: brown;
+    }
+    &.active {
+        color: gold;
+        &.up {
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    &.pasive {
+        color: gray;
+        svg {
+            display: none;
+        }
     }
 }
 
@@ -71,5 +120,14 @@ h1 {
     span {
         color: gray;
         font-size: 26px;
+    }
+    h2 span {
+        svg {
+            width: 24px;
+            height: 24px;
+            margin: 0 0 0 10px;
+            display: inline-block;
+            fill: red
+        }
     }
 }
